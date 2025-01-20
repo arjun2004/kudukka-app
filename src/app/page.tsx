@@ -4,7 +4,6 @@ import Image from "next/image";
 import { ConnectButton } from "thirdweb/react";
 import thirdwebIcon from "@public/thirdweb.svg";
 import { client } from "./client";
-import { Html } from "next/document";
 export default function Home() {
   return (
     <main className="p-4 pb-10 min-h-[100vh] flex items-center justify-center container max-w-screen-lg mx-auto">
@@ -19,9 +18,9 @@ function Header() {
   return (
     <header className="flex flex-col items-center mb-20 md:mb-20">
       <div className="px-4 py-5 my-5 text-center">
-        <img
+        <Image
           className="d-block mx-auto mb-4"
-          src="icon.png"
+          src="/icon.png"
           alt=""
           width="72"
           height="57"
