@@ -6,7 +6,7 @@ import thirdwebIcon from "@public/thirdweb.svg";
 import { client } from "./client";
 export default function Home() {
   return (
-    <main className="p-4 pb-10 min-h-[100vh] flex items-center justify-center container max-w-screen-lg mx-auto">
+    <main className="p-4 pb-10 min-h-[100vh] flex items-center justify-center container max-w-screen-lg mx-auto dark">
       <div className="py-20">
         <Header />
       </div>
@@ -25,14 +25,11 @@ function Header() {
           width="72"
           height="57"
         />
-        <h1
-          className="display-4 fw-bold text-body-emphasis text-white"
-          style={{ color: "white" }}
-        >
+        <h1 className="text-slate-900 text-8xl tracking-tight font-extrabold sm:text-5xl dark:text-white">
           Kudukka
         </h1>
         <div className="col-lg-6 mx-auto">
-          <p className="lead mb-4">
+          <p className="text-center p-7 md:text-center lead mb-4">
             Your ultimate destination for secure and intelligent cryptocurrency
             management. Our platform combines technology to safeguard your
             investments with advanced AI-powered analytics to guide your buying
