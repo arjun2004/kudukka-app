@@ -6,7 +6,7 @@ import thirdwebIcon from "@public/thirdweb.svg";
 import { client } from "./client";
 export default function Home() {
   return (
-    <main className="p-4 pb-10 min-h-[100vh] flex items-center justify-center container max-w-screen-lg mx-auto dark">
+    <main className="p-4 pb-10 min-h-[100vh] flex items-center justify-center container max-w-screen-lg mx-auto">
       <div className="py-20">
         <Header />
       </div>
@@ -25,7 +25,7 @@ function Header() {
           width="72"
           height="57"
         />
-        <h1 className="text-slate-900 text-8xl tracking-tight font-extrabold sm:text-5xl dark:text-white">
+        <h1 className="text-slate-900 text-6xl tracking-tight font-extrabold sm:text-4xl md:text-6xl lg:text-8xl dark:text-white">
           Kudukka
         </h1>
         <div className="col-lg-6 mx-auto">

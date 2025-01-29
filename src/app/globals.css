@@ -17,6 +17,6 @@
 
 @layer base {
   body {
-    @apply bg-zinc-950 text-neutral-200;
+    @apply bg-gradient-to-r from-yellow-300 to-yellow-700 backdrop-blur-md text-neutral-200;
   }
 }
