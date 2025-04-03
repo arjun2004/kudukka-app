@@ -1,9 +1,11 @@
 "use client";
+import { useState, useEffect } from "react";
 
 import Image from "next/image";
 import { ConnectButton } from "thirdweb/react";
 import thirdwebIcon from "@public/thirdweb.svg";
 import { client } from "./client";
+
 export default function Home() {
   return (
     <main className="p-4 pb-10 min-h-[100vh] flex items-center justify-center container max-w-screen-lg mx-auto">
@@ -15,6 +17,22 @@ export default function Home() {
 }
 
 function Header() {
+  const [message, setMessage] = useState("Loading...");
+
+  useEffect(() => {
+    console.log("Fetching from Next.js API...");
+
+    fetch("/api/getData") // Fetch from Next.js API
+      .then((res) => res.json())
+      .then((data) => {
+        console.log("Received data:", data);
+        setMessage(data.message);
+      })
+      .catch((error) => {
+        console.error("Error fetching data:", error);
+        setMessage("Error fetching data");
+      });
+  }, []);
   return (
     <header className="flex flex-col items-center mb-20 md:mb-20">
       <div className="px-4 py-5 my-5 text-center">
@@ -45,7 +63,11 @@ function Header() {
                 url: "https://example.com",
               }}
             />
+            <br />
           </div>
+          <p className="button-50" role="button">
+            Buy this Coin! {message}
+          </p>
         </div>
       </div>
     </header>
