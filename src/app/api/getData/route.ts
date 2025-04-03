@@ -1,9 +1,9 @@
-export async function GET() {
-  const flaskAPI = "https://32cf-111-92-16-20.ngrok-free.app/predict";
+export async function GET(): Promise<Response> {
+  const flaskAPI: string = "https://32cf-111-92-16-20.ngrok-free.app/predict";
 
   try {
-    const response = await fetch(flaskAPI);
-    const data = await response.json();
+    const response: Response = await fetch(flaskAPI);
+    const data: unknown = await response.json();
     return new Response(JSON.stringify(data), {
       headers: { "Content-Type": "application/json" },
     });
@@ -17,7 +17,8 @@ export async function GET() {
     );
   }
 }
-export function HelloWorld() {
+
+export function HelloWorld(): Response {
   return new Response(JSON.stringify({ message: "Hello, World!" }), {
     headers: { "Content-Type": "application/json" },
   });
