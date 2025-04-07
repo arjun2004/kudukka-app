@@ -1,5 +1,5 @@
 export async function GET(): Promise<Response> {
-  const flaskAPI: string = "https://32cf-111-92-16-20.ngrok-free.app/predict";
+  const flaskAPI: string = "https://d916-152-59-224-34.ngrok-free.app/predict";
 
   try {
     const response: Response = await fetch(flaskAPI);
