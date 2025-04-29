@@ -1,0 +1,1 @@
+{"kind":"FETCH","data":{"headers":{"connection":"close","content-length":"46","content-type":"application/json","date":"Tue, 22 Apr 2025 17:23:42 GMT","server":"Werkzeug/3.1.3 Python/3.9.13"},"body":"ewogICJtZXNzYWdlIjogWwogICAgIiRVU0RUIiwKICAgIDQ5Ljk4CiAgXQp9Cg==","status":200,"url":"http://127.0.0.1:5000/predict"},"revalidate":31536000,"tags":[]}
